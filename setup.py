@@ -5,8 +5,12 @@ except ImportError:
 
 setup(
     name='beancount-ethereum',
-    version='1.4.2',
-    description='Ethereum transaction importer for Beancount',
+    version='2.0.0',
+    description='Ethereum transaction importer for Beancount (v3 avec Beangulp)',
     packages=['beancount_ethereum'],
     license='GPLv3',
+    install_requires=[
+        'beancount>=3.2.0',
+        'beangulp>=0.2.0'
+    ]
 )

@@ -27,14 +27,14 @@ CONFIG = [
 ]
 ```
 
-Check with `bean-identify`:
+Check with `identify`:
 
 ```
-bean-identify import_config.py downloads
+python import_config.py identify downloads
 ```
 
-Import transactions with `bean-extract`:
+Import transactions with `extract`:
 
 ```
-bean-extract -e test.beancount import_config.py downloads
+python import_config.py extract downloads
 ```
