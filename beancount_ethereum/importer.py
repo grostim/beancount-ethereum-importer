@@ -13,6 +13,7 @@ MINER = '0xffffffffffffffffffffffffffffffffffffffff'
 
 
 class Importer(beangulp.Importer):
+    name = "ethereum"
     def __init__(
         self,
         config_path='config.json',
@@ -24,8 +25,6 @@ class Importer(beangulp.Importer):
         self.min_date = datetime.datetime.now() - datetime.timedelta(days=max_delta)
         self.import_balances = import_balances
 
-    def name(self) -> str:
-        return 'ethereum'
 
     def identify(self, filepath: str) -> bool:
         name = self.config['name']
